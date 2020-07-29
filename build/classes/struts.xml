@@ -1,0 +1,90 @@
+<!DOCTYPE struts PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" 
+"http://struts.apache.org/dtds/struts-2.3.dtd"> 
+   
+<struts>  
+
+<package extends="struts-default, json-default" name="default" >
+
+<action name="inicio" method="inicio" class="com.web.dispatcher.PrincipalDispatcher">
+	<result name="success">index.jsp</result>
+	<result name="error">error.jsp</result>
+</action>
+
+<action name="quien" method="quien" class="com.web.dispatcher.PrincipalDispatcher">
+	<result name="success">quien.jsp</result>
+	<result name="error">error.jsp</result>
+</action>
+
+<action name="servicios" method="servicios" class="com.web.dispatcher.PrincipalDispatcher">
+	<result name="success">servicios.jsp</result>
+	<result name="error">error.jsp</result>
+</action>
+
+<action name="borrarServicios" method="borrarServicios" class="com.web.dispatcher.PrincipalDispatcher">
+	<result name="success">borrarServicios.jsp</result>
+	<result name="error">error.jsp</result>
+</action>
+
+<action name="cambiarServicios" method="cambiarServicios" class="com.web.dispatcher.PrincipalDispatcher">
+	<result name="success">cambiarServicios.jsp</result>
+	<result name="error">error.jsp</result>
+</action>
+
+<action name="anadirServicios" method="anadirServicios" class="com.web.dispatcher.PrincipalDispatcher">
+	<result name="success">anadirServicios.jsp</result>
+	<result name="error">error.jsp</result>
+</action>
+
+<action name="contacto" method="contacto" class="com.web.dispatcher.PrincipalDispatcher">
+	<result name="success">contacto.jsp</result>
+	<result name="error">error.jsp</result>
+</action>
+
+<action name="error" method="error" class="com.web.dispatcher.PrincipalDispatcher">
+	<result name="error">error.jsp</result>
+</action>
+
+<action name="enviarEmail" method="enviarEmail" class="com.web.dispatcher.EmailDispatcher">
+	<result name="success">index.jsp</result>
+	<result name="error">error.jsp</result>
+</action>
+
+<action name="cargarServicios" method="cargarServicios" class="com.web.dispatcher.ServiciosDispatcher">
+	<result type="json"></result>
+</action>
+
+<action name="cargarUnServicio" method="cargarUnServicio" class="com.web.dispatcher.ServiciosDispatcher">
+	<result name="success">verServicio.jsp</result>
+</action>
+
+<action name="cargarUnServicio2" method="cargarUnServicio2" class="com.web.dispatcher.ServiciosDispatcher">
+	<result type="json"></result>
+</action>
+
+<action name="eliminarServicio" method="eliminarServicio" class="com.web.dispatcher.ServiciosDispatcher">
+	<result name="success">servicios.jsp</result>
+</action>
+
+<action name="anadirServicio" method="anadirServicio" class="com.web.dispatcher.ServiciosDispatcher">
+	<result name="success">servicios.jsp</result>
+</action>
+
+<action name="datosServicio" method="datosServicio" class="com.web.dispatcher.ServiciosDispatcher">
+	<result name="success">cambiarServicios.jsp</result>
+	<result name="error">error.jsp</result>
+</action>
+
+<action name="cambiarServicio" method="cambiarServicio" class="com.web.dispatcher.ServiciosDispatcher">
+	<result name="success">servicios.jsp</result>
+</action>
+
+<action name="mostrarServicio" method="mostrarServicio" class="com.web.dispatcher.ServiciosDispatcher">
+	<result name="success">verServicio.jsp</result>
+</action>
+ 	
+</package>    
+
+</struts>
+
+
